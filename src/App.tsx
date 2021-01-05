@@ -5,12 +5,13 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
-import {useColorScheme} from 'react-native';
+import {StatusBar, useColorScheme} from 'react-native';
 
 import themes from './styles/themes';
 import Home from './screens/Home';
 import Exercises from './screens/Exercises';
 import Profile from './screens/Profile';
+import {color} from 'react-native-reanimated';
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -21,6 +22,11 @@ const App = () => {
   return (
     <>
       <NavigationContainer>
+        <StatusBar
+          backgroundColor={theme.colors.background}
+          barStyle={theme.title === 'dark' ? 'light-content' : 'dark-content'}
+        />
+
         <ThemeProvider theme={theme}>
           <Navigator
             screenOptions={({route}) => ({
@@ -50,12 +56,10 @@ const App = () => {
               },
             })}
             tabBarOptions={{
-              activeTintColor: 'tomato',
               inactiveTintColor: 'gray',
               style: {
                 backgroundColor: theme.colors.background,
-                borderTopWidth: 0.2,
-                borderTopColor: '#414141',
+                borderTopWidth: 0.5,
               },
               showLabel: false,
             }}>
