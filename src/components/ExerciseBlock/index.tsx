@@ -1,15 +1,25 @@
 import React from 'react';
-import {Title, Title2} from '../common/Text';
-import {Container, TitleDescription, Text} from './styles';
+import {Image, View} from 'react-native';
+import {Container, Title, TitleDescription, Text} from './styles';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import defaultImg from './peepo.png';
 
-const ExerciseBlock = () => {
+const ExerciseBlock = ({navigation}: any) => {
   return (
-    <Container>
+    <Container onPress={() => navigation.navigate('Exercise')}>
       <TitleDescription>
-        <Title2>Generic exercise</Title2>
-        <Text>3x 20 | 15 min</Text>
+        <View>
+          <Image
+            style={{width: 50, height: 50, marginRight: 16}}
+            source={defaultImg}
+          />
+        </View>
+        <View>
+          <Title>Generic exercise</Title>
+          <Text>3x 20 | 15 min</Text>
+        </View>
       </TitleDescription>
-      <Title style={{fontSize: 50}}>{'>'}</Title>
+      <SimpleLineIcons name="arrow-right" size={16} color="#fff" />
     </Container>
   );
 };

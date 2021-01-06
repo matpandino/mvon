@@ -1,12 +1,12 @@
 import React from 'react';
 import {Title, Wrapper} from '../components/common';
 
-const Exercises = () => {
+const ProfileScreen = () => {
   return (
     <Wrapper>
-      <Title>MVON APP - Exercises</Title>
+      <Title>MVON APP - Profile</Title>
     </Wrapper>
   );
 };
 
-export default Exercises;
+export default ProfileScreen;
