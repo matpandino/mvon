@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, View} from 'react-native';
 import {Container, Title, TitleDescription, Text} from './styles';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
-import defaultImg from './peepo.png';
+import defaultImg from '../../../assets/peepo.png';
 
 const ExerciseBlock = ({navigation}: any) => {
   return (
