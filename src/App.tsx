@@ -6,7 +6,7 @@ import {ThemeProvider} from 'styled-components';
 import {useColorScheme} from 'react-native';
 
 import themes from './styles/themes';
-import MainRoutes from './routes/main.routes';
+import RootRoutes from './routes/index.routes';
 
 const App = () => {
   const deviceTheme = useColorScheme();
@@ -16,7 +16,7 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <NavigationContainer>
-          <MainRoutes />
+          <RootRoutes />
         </NavigationContainer>
       </ThemeProvider>
     </>

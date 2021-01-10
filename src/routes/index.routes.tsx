@@ -7,7 +7,7 @@ import {useTheme} from 'styled-components';
 
 const Stack = createStackNavigator();
 
-const MainRoutes = () => {
+const RootRoutes = () => {
   const theme = useTheme();
 
   return (
@@ -41,11 +41,11 @@ const MainRoutes = () => {
             },
           }),
         })}>
-        <Stack.Screen name="BottomMenu" component={BottomMenu} />
+        <Stack.Screen name="MainPages" component={BottomMenu} />
         <Stack.Screen name="Exercise" options={{}} component={ShowExercise} />
       </Stack.Navigator>
     </>
   );
 };
 
-export default MainRoutes;
+export default RootRoutes;
